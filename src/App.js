@@ -83,14 +83,14 @@ function App() {
             <Route exact path="/contact">
               <Contact />
             </Route>{" "}
-            <Route path="/products/:id">
+            <Route exact path="/products/:id">
               <ProductPage />
             </Route>{" "}
             <Subscribe />
             <Footer />
-          </Fragment>
+          </Fragment>{" "}
         </Switch>{" "}
-      </ScrollTop>
+      </ScrollTop>{" "}
     </Router>
   );
 }
