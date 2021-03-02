@@ -24,6 +24,7 @@ export const breakpoint = {
   mobileL: `(max-width: 425px)`,
   tabletS: `(max-width: 768px)`,
   tabletL: `(max-width: 1024px)`,
+  desktop: `(min-width: 500px)`,
 };
 
 export const mixin = {

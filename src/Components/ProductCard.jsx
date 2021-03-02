@@ -60,7 +60,7 @@ function ProductCard(props) {
         ></ProductCard__img>
       </ProductCard__imgBox>
       <ProductCard__name>{productName}</ProductCard__name>
-      <ProductCard__price>£{price}</ProductCard__price>
+      <ProductCard__price>${price}</ProductCard__price>
     </ProductCard__container>
   );
 }

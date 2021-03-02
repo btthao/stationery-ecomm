@@ -84,7 +84,7 @@ const Reviews__nav = styled.div`
   border: 0.1rem solid ${theme.color.pinkish};
   @media ${breakpoint.tabletS} {
     width: 60%;
-    min-width: 22rem;
+    min-width: 22.5rem;
   }
 `;
 

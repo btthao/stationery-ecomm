@@ -12,8 +12,10 @@ const Button__container = styled(Link)`
   background-color: ${theme.color.white};
   color: ${theme.color.black};
   border: 0.2rem solid ${theme.color.pink};
-  &:hover {
-    background-color: ${theme.color.pinkish};
+  @media ${breakpoint.desktop} {
+    &:hover {
+      background-color: ${theme.color.pinkish};
+    }
   }
   @media ${breakpoint.mobileL} {
     font-size: 1.3rem;

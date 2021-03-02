@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import React from "react";
 import styled from "styled-components";
 import { theme, mixin, breakpoint } from "../style/styles";
 import { useProductsContext } from "../context";
@@ -54,8 +54,10 @@ const CheckoutSummary__btn = styled.button`
   ${mixin.transition};
   cursor: pointer;
   letter-spacing: 0.1rem;
-  &:hover {
-    background-color: ${theme.color.pink};
+  @media ${breakpoint.desktop} {
+    &:hover {
+      background-color: ${theme.color.pink};
+    }
   }
 `;
 

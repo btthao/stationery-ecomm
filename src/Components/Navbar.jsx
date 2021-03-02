@@ -61,7 +61,7 @@ const NavMenu = styled.div`
   }
   @media ${breakpoint.mobileL} {
     width: 100%;
-    min-height: 100%;
+    min-height: 100vh;
   }
 `;
 

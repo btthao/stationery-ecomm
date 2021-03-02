@@ -93,11 +93,12 @@ const Product__addToBasket = styled.button`
   font-family: ${theme.font.ubuntu};
   border: 0.1rem solid ${theme.color.pink};
   ${mixin.transition};
-
   ${mixin.flexCenter};
   cursor: pointer;
-  &:hover {
-    background-color: ${theme.color.white};
+  @media ${breakpoint.desktop} {
+    &:hover {
+      background-color: ${theme.color.white};
+    }
   }
 `;
 const Product__quantityBox = styled.div`

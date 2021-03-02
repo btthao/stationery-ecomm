@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { Link, useHistory } from "react-router-dom";
 import { useProductsContext } from "../context";
-import styled, { css } from "styled-components";
+import styled from "styled-components";
 import { theme, breakpoint, mixin } from "../style/styles";
 import { auth } from "../../firebase";
 
