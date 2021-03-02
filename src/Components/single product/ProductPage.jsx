@@ -8,7 +8,6 @@ import AddIcon from "@material-ui/icons/Add";
 import RemoveIcon from "@material-ui/icons/Remove";
 import Carousel from "../Carousel";
 import { useProductsContext } from "../context";
-import { Link, useHistory } from "react-router-dom";
 
 const Product__container = styled.div`
   ${mixin.maxWidth};
@@ -143,6 +142,7 @@ const Product__notification = styled.div`
 
 function ProductPage() {
   const { id } = useParams();
+  const allProducts = allProductsList;
   const [product, setProduct] = useState({});
   const [index, setIndex] = useState(0);
   const [date, setDate] = useState("");
@@ -188,7 +188,7 @@ function ProductPage() {
   };
 
   const findCategory = (category, index) => {
-    const sameCategory = allProductsList.filter(
+    const sameCategory = allProducts.filter(
       (item) => item.category === category && item.order - 1 !== index
     );
 
@@ -196,9 +196,9 @@ function ProductPage() {
   };
 
   useEffect(() => {
-    const currentProduct = allProductsList.find((product) => product.id === id);
+    const currentProduct = allProducts.find((product) => product.id === id);
     setProduct(currentProduct);
-    const index = allProductsList.indexOf(currentProduct);
+    const index = allProducts.indexOf(currentProduct);
     setIndex(index);
     //get delivery date
     setDate(getDeliveryDate());
@@ -251,7 +251,7 @@ function ProductPage() {
         <Product__imgContainer>
           <Product__img
             src={
-              require(`../../Assets/images/${allProductsList[index].imgUrl}`)
+              require(`../../Assets/images/${allProducts[index].imgUrl}`)
                 .default
             }
             alt="product image"

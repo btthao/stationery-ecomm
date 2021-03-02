@@ -62,7 +62,7 @@ function Slogan() {
   return (
     <Slogan__container>
       <Slogan__text>
-        Curabitur tortor. Pellentesque nibh. Aenean quam. In sem at dolor.
+        Tohi Curabitur tortor. Pellentesque nibh. Aenean quam. In sem at dolor.
         Maecenas mattis. Sed convallis tristique sem. Proin ut ligula egestas
         porttitor. Morbi lectus risus, iaculis vel.
       </Slogan__text>
