@@ -14,7 +14,6 @@ const Banner__container = styled.div`
   font-size: 12rem;
   color: ${theme.color.white};
   font-weight: 600;
-  text-shadow: 2px 0px 14px rgba(230, 230, 230, 0.78);
   @media ${breakpoint.tabletS} {
     font-size: 8rem;
   }

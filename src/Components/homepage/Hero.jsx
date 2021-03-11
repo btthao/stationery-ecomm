@@ -21,10 +21,10 @@ const Hero__img = styled.div`
   height: 70vh;
   min-height: 400px;
   max-height: 1000px;
-  background: ${theme.color.pink};
+  background: ${theme.color.white};
   background: url(${({ url }) => url});
-  background: linear-gradient(to right, rgba(24, 23, 23, 0.3), rgba(0, 0, 0, 0)),
-    url(${({ url }) => url});
+  /* background: linear-gradient(to right, rgba(24, 23, 23, 0.3), rgba(0, 0, 0, 0)),
+    url(${({ url }) => url}); */
   background-size: cover;
   background-position: center;
 `;

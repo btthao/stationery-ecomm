@@ -23,40 +23,43 @@ const Filters__container = styled.form`
     padding: 0;
     position: relative;
     top: 0;
-    div {
-      width: 100vw;
-    }
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
   }
 `;
 
 const Filters__filter = styled.div`
   ${mixin.flexCenter};
   height: 100%;
+  /* position: relative; */
   @media ${breakpoint.tabletS} {
     padding: 0 7%;
+    width: 100%;
   }
 `;
 
 const Filters__filterItem = styled.div`
   position: relative;
   margin-right: 2rem;
-  height: 100%;
-  div:nth-child(1) {
-    width: 100%;
-    height: 100%;
-    ${mixin.flexCenter};
-    cursor: pointer;
-    h3 {
-      font-size: 1.5rem;
-      font-weight: 400;
-    }
-    .MuiSvgIcon-root {
-      font-size: 2rem;
-      transform: translateY(5%);
-    }
-  }
+  height: 5rem;
   @media ${breakpoint.tabletS} {
     margin: auto;
+  }
+`;
+
+const Filters__filterItemLabel = styled.div`
+  width: 100%;
+  height: 100%;
+  ${mixin.flexCenter};
+  cursor: pointer;
+  h3 {
+    font-size: 1.5rem;
+    font-weight: 400;
+  }
+  .MuiSvgIcon-root {
+    font-size: 2rem;
+    transform: translateY(5%);
+    -webkit-transform: translateY(5%);
   }
 `;
 
@@ -65,18 +68,18 @@ const Filters__filterArea = styled.div`
   bottom: 0;
   left: 50%;
   transform: translate(-50%, 100%);
+  -webkit-transform: translate(-50%, 100%);
   background-color: ${theme.color.white};
   grid-gap: 1.8rem;
   padding: 2rem;
   display: none;
   max-width: 15rem !important;
   border: 0.1rem solid ${theme.color.grey};
-
   &.show {
     display: grid;
   }
   @media ${breakpoint.mobileL} {
-    padding: 2rem 0.5rem;
+    padding: 2rem 0.8rem;
     width: fit-content;
     max-width: 11rem !important;
   }
@@ -101,18 +104,28 @@ const Filters__sort = styled.div`
     grid-row: 1;
     justify-content: center;
     border-bottom: 0.1rem solid ${theme.color.grey};
+    width: 100%;
+  }
+  .sort__label {
+    padding-right: 0.7rem;
+    border-right: 0.15rem solid ${theme.color.black};
+  }
+  .MuiSvgIcon-root {
+    font-size: 2rem;
+    transform: translateY(5%);
+    -webkit-transform: translateY(5%);
   }
 `;
 
 const Filters__select = styled.select`
   font-size: 1.5rem;
   font-weight: 400;
-  height: 50%;
   font-family: ${theme.font.ubuntu};
   width: fit-content;
-  border-left: 0.1rem black solid;
   margin-left: 0.7rem;
-  padding-left: 0.3rem;
+  background-color: transparent;
+  appearance: none;
+  cursor: pointer;
 `;
 
 const Filters__clear = styled.button`
@@ -217,13 +230,13 @@ function Filters() {
               key={index}
               onMouseLeave={() => hideFilterArea()}
             >
-              <div
+              <Filters__filterItemLabel
                 onClick={(e) => showFilterArea(e)}
                 onMouseEnter={(e) => showFilterArea(e)}
               >
                 <h3>{item.label}</h3>
                 <ExpandMoreIcon />
-              </div>
+              </Filters__filterItemLabel>
               <Filters__filterArea
                 ref={(el) => (filterRef.current[index] = el)}
               >
@@ -252,7 +265,9 @@ function Filters() {
 
       {/* sort */}
       <Filters__sort>
-        <Filters__label htmlFor="sort">Sort by</Filters__label>
+        <Filters__label htmlFor="sort" className="sort__label">
+          Sort by
+        </Filters__label>
         <Filters__select id="sort" value={sort} onChange={(e) => sortItems(e)}>
           {sortProducts.map((item, index) => {
             return (
@@ -262,6 +277,7 @@ function Filters() {
             );
           })}
         </Filters__select>
+        <ExpandMoreIcon />
       </Filters__sort>
 
       {/* reset */}
