@@ -74,14 +74,13 @@ const Filters__filterArea = styled.div`
   padding: 2rem;
   display: none;
   max-width: 15rem !important;
+  min-width: 10rem !important;
   border: 0.1rem solid ${theme.color.grey};
   &.show {
     display: grid;
   }
   @media ${breakpoint.mobileL} {
-    padding: 2rem 0.8rem;
-    width: fit-content;
-    max-width: 11rem !important;
+    padding: 2rem 0.8rem 2rem 0.5rem;
   }
 `;
 

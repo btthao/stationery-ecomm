@@ -21,10 +21,7 @@ const Nav = styled.nav`
   padding-right: 3rem;
   border-bottom: 0.1rem solid ${theme.color.grey};
   @media ${breakpoint.tabletS} {
-    padding: 0 0.4rem 0 2.2rem;
-  }
-  @media ${breakpoint.mobileL} {
-    padding: 0 0.1rem 0 1.8rem;
+    padding: 0 0.7rem;
   }
   & > * {
     height: 3rem;
