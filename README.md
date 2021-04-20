@@ -1,8 +1,14 @@
-### About
-
 An ecommerce website for a fictional stationery company.
 
-## Built with
+### Features 
+
+- Add/remove items to/from cart 
+- Filter/ sort products
+- Similar products suggestions
+- User login
+
+
+### Built with
 
 - React Hooks
 - Styled-components
