@@ -19,13 +19,14 @@ body {
 
 
 html{
-    font-size: 10px;
+    font-size: 10px;   
 }
 
 a[href^=tel] {
     color: inherit;
     text-decoration: none;
 }
+
 
 `;
 

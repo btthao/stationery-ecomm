@@ -14,6 +14,7 @@ const Footer__container = styled.div`
   padding-bottom: 3rem;
   border-top: 0.1rem solid ${theme.color.grey};
   font-family: ${theme.font.ubuntu};
+  overflow: hidden;
   @media ${breakpoint.tabletS} {
     flex-direction: column;
     align-items: flex-start;
