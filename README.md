@@ -2,10 +2,8 @@ An ecommerce website for a fictional stationery company.
 
 ### Features 
 
-- Add/remove items to/from cart 
-- Cart management
+- Manage shopping carts
 - Filter/ sort products
-- Similar products suggestions
 - User login
 
 
